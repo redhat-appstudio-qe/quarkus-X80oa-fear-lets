@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-code-with-quarkus-ygsl
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-code-with-quarkus-ygsl
+    app.kubernetes.io/part-of: quarkus
+  name: devfile-sample-code-with-quarkus-ygsl
+  namespace: e2e-demos-eola-tenant
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: devfile-sample-code-with-quarkus-ygsl
+status:
+  loadBalancer: {}
